@@ -4,3 +4,4 @@ out-prod/
 .cpcache/
 .nrepl-port
 *.iml
+.shadow-cljs/

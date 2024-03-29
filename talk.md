@@ -58,3 +58,35 @@ https://github.com/clojure/clojurescript
 * Written in Clojure, runs on JVM, packaged as JAR
 * Emits JS code
 * Uses google closure for bundling, dead code elimination etc.
+* CLJSJS project 
+
+## Shadow CLJS
+
+Mention figwheel
+
+https://github.com/thheller/shadow-cljs
+
+* Wrapper for ClojureScript compiler
+* Written in Clojure and ClojureScript
+* Provides auto-reload of code in the browser (among other things)
+* Design goal was NPM integration - creates wrappers around NPM packages so they can be
+  consumed via google closure ecosystem
+* Can be installed via NPM
+* Supports `package.json` and NPM dependencies automatically
+
+* Can be invoked as command line utility, or can be used as a library
+* Starts bunch of processes - internal web server, NREPL server, optionally
+  another web server to serve static assets (if configured)
+
+Show shadow CLJS web interface
+
+* Using ':preloads' injects shadow CLJS bootstrap code into resulting bundle
+* This code does a bunch of stuff, but in dev mode it creates a websocket connection
+  to internal shadow CLJS server
+
+Show WS traffic and new runtime on shadow CLJS server console
+NREPL for CLJS in-browser
+
+* Watches for changes, invokes ClojureScript compiler
+* Notifies browser about changed namespaces via WS connection
+* Browser reloads those namespaces via `eval`

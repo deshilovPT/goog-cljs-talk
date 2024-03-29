@@ -1,7 +1,8 @@
 (ns dev.compiler
   (:require [cljs.build.api :as build]
             [cljs.env :as env]
-            [cljs.main]
+            [shadow.cljs.devtools.api]
+            [shadow.cljs.devtools.server]
             [clojure.java.io :as io]
             [clojure.string :as str]
             [org.httpkit.server :as server]))
@@ -32,6 +33,12 @@
               }]
     (env/with-compiler-env cenv
                            (build/build source opts cenv))))
+
+;; Shadow-CLJS
+(defn start-shadow-cljs
+  []
+  (shadow.cljs.devtools.server/start!)
+  (shadow.cljs.devtools.api/watch :out))
 
 ;; Web server integration
 

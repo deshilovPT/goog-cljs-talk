@@ -1,0 +1,8 @@
+{:builds
+ {:out {
+        :target :browser
+        :output-dir "out"
+        :output-to  "out/main.js"
+        :verbose    true
+        :modules    {:main {:entries [browser.module]}}
+        }}}
