@@ -5,3 +5,4 @@ out-prod/
 .nrepl-port
 *.iml
 .shadow-cljs/
+node_modules/
