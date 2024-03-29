@@ -1,6 +1,6 @@
-## Talk plan
+# Talk plan
 
-### Google Closure Compiler
+## Google Closure Compiler
 
 https://github.com/google/closure-compiler
 
@@ -48,5 +48,13 @@ java -jar /Users/deshilov/.m2/repository/com/google/javascript/closure-compiler-
 
 ### Standard library
 
-Annotated JS code with bunch of functions
+* Annotated JS code with bunch of functions
+* Namespaces support
 
+## ClojureScript
+
+https://github.com/clojure/clojurescript
+
+* Written in Clojure, runs on JVM, packaged as JAR
+* Emits JS code
+* Uses google closure for bundling, dead code elimination etc.
