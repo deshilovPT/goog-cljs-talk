@@ -1,0 +1,9 @@
+{:paths ["src/clj"]
+
+ :deps {
+        org.clojure/clojurescript {:mvn/version "1.11.132"}
+
+
+        ;; HTTP server for static content
+        http-kit/http-kit {:mvn/version "2.7.0"}
+        }}
